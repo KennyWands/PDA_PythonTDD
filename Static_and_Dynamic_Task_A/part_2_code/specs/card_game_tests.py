@@ -10,11 +10,11 @@ class TestCardGame(unittest.TestCase):
         self.game = CardGame()
         self.cards = [self.card, self.card1]
 
-    def test_card_has_suit(self):
-        self.assertEquals("Diamond", self.card.suit)
-
     def test_card_has_value(self):
         self.assertEquals(2, self.card.value)
+
+    def test_card_has_suit(self):
+        self.assertEqual("Diamond", self.card.suit)
 
     def test_for_Ace(self):
         self.assertEqual(True, self.game.check_for_ace(self.card1))
